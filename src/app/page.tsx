@@ -1,13 +1,12 @@
-import dayjs from 'dayjs'
 import { ArrowRight } from 'lucide-react'
 import { cookies } from 'next/headers'
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { EmptyMemories } from '@/components/EmptyMemories'
+import { MemoryCard } from '@/components/MemoryCard'
 import { api } from '@/lib/api'
 
-interface Memory {
+interface MemoryExcerpt {
   id: string
   coverUrl: string
   excerpt: string
@@ -29,7 +28,7 @@ export default async function Home() {
     },
   })
 
-  const memories: Memory[] = response.data
+  const memories: MemoryExcerpt[] = response.data
 
   if (memories.length === 0) {
     return <EmptyMemories />
@@ -40,19 +39,12 @@ export default async function Home() {
       {memories.map((memory) => {
         return (
           <div key={memory.id} className="space-y-4">
-            <time className="-ml-8 flex items-center gap-2 text-sm text-gray-100 before:h-px before:w-5 before:bg-gray-50">
-              {dayjs(memory.createdAt).format('D[ de ]MMMM[, ]YYYY')}
-            </time>
-            <Image
-              src={memory.coverUrl}
-              alt=""
-              width={592}
-              height={280}
-              className="aspect-video w-full rounded-lg object-cover"
+            <MemoryCard
+              coverUrl={memory.coverUrl}
+              createdAt={memory.createdAt}
+              text={memory.excerpt}
+              id={memory.id}
             />
-            <p className="text-lg leading-relaxed text-gray-100">
-              {memory.excerpt}
-            </p>
             <Link
               href={`/memories/${memory.id}`}
               className="flex items-center gap-2 text-sm text-gray-200 hover:text-gray-100"
