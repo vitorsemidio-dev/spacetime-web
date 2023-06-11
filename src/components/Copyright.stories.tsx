@@ -7,6 +7,13 @@ const meta: Meta<typeof Copyright> = {
   component: Copyright,
   tags: ['components'],
   argTypes: {},
+  decorators: [
+    (Story) => (
+      <div className="flex h-screen items-center justify-center bg-gray-900">
+        <Story />
+      </div>
+    ),
+  ],
 }
 
 export default meta
