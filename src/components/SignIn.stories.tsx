@@ -1,12 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { EmptyMemories } from './EmptyMemories'
+import { SignIn } from './SignIn'
 import { StorybookWrapper } from './StorybookWrapper'
 
-const meta: Meta<typeof EmptyMemories> = {
-  title: 'Components/EmptyMemories',
-  component: EmptyMemories,
-  tags: ['components'],
+const meta: Meta<typeof SignIn> = {
+  title: 'Components/SignIn',
+  component: SignIn,
   argTypes: {},
   decorators: [
     (Story) => (
@@ -19,7 +18,7 @@ const meta: Meta<typeof EmptyMemories> = {
 
 export default meta
 
-type Story = StoryObj<typeof EmptyMemories>
+type Story = StoryObj<typeof SignIn>
 
 export const Default: Story = {
   args: {},

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { Copyright } from './Copyright'
+import { StorybookWrapper } from './StorybookWrapper'
 
 const meta: Meta<typeof Copyright> = {
   title: 'Components/Copyright',
@@ -9,9 +10,9 @@ const meta: Meta<typeof Copyright> = {
   argTypes: {},
   decorators: [
     (Story) => (
-      <div className="flex h-screen items-center justify-center bg-gray-900">
+      <StorybookWrapper>
         <Story />
-      </div>
+      </StorybookWrapper>
     ),
   ],
 }
