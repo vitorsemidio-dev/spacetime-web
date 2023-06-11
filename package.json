@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.3",
@@ -30,7 +32,16 @@
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
+    "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addon-interactions": "^7.0.20",
+    "@storybook/addon-links": "^7.0.20",
+    "@storybook/blocks": "^7.0.20",
+    "@storybook/nextjs": "^7.0.20",
+    "@storybook/react": "^7.0.20",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/js-cookie": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "eslint-plugin-storybook": "^0.6.12",
+    "prettier-plugin-tailwindcss": "^0.3.0",
+    "storybook": "^7.0.20"
   }
 }
