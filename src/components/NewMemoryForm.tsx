@@ -5,8 +5,8 @@ import { Camera } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { FormEvent } from 'react'
 
-import { MediaPicker } from '@/components/MediaPicker'
-import { api } from '@/lib/api'
+import { MediaPicker } from '../components/MediaPicker'
+import { api } from '../lib/api'
 
 export function NewMemoryForm() {
   const router = useRouter()
