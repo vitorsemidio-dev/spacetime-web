@@ -1,10 +1,7 @@
-import type { Preview } from '@storybook/react'
-// .storybook/preview.js
 import { withThemeByDataAttribute } from '@storybook/addon-styling'
+import type { Preview } from '@storybook/react'
 
-import '../src/app/globals.css' // replace with the name of your tailwind css file
-
-/* snipped for brevity */
+import '../src/app/globals.css'
 
 export const decorators = [
   withThemeByDataAttribute({
