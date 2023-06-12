@@ -17,26 +17,18 @@ const config: StorybookConfig = {
         postCss: true,
       },
     },
-    // {
-    //   name: '@storybook/addon-coverage',
-    //   options: {
-    //     istanbul: {
-    //       exclude: ['**/components/**/index.ts'],
-    //     },
-    //   },
-    // },
     'storybook-addon-module-mock',
   ],
   framework: {
     name: '@storybook/nextjs',
     options: {},
   },
-  // features: {
-  //   storyStoreV7: true,
-  // },
-  // typescript: {
-  //   reactDocgen: 'react-docgen',
-  // },
+  features: {
+    storyStoreV7: true,
+  },
+  typescript: {
+    reactDocgen: 'react-docgen',
+  },
   docs: {
     autodocs: 'tag',
   },
